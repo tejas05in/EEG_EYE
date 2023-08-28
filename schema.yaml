@@ -1,1 +1,19 @@
-key: value
+COLUMNS:
+  AF3: float64
+  F7: float64
+  F3: float64
+  FC5: float64
+  T7: float64
+  P7: float64
+  O1: float64
+  O2: float64
+  P8: float64
+  T8: float64
+  FC6: float64
+  F4: float64
+  F8: float64
+  AF4: float64
+  eyeDetection: int8
+
+TARGET_COLUMN:
+  name: eyeDetection

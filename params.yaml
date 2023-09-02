@@ -1,1 +1,6 @@
-key: value
+KNeighborsClassifier:
+  n_neighbors: [5]
+  algorithm: ['auto']
+  leaf_size: [30]
+  metric: ['minkowski']
+

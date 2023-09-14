@@ -15,10 +15,11 @@ class ModelTrainer:
         logger.info('Model training started')
         train_data = pd.read_csv(self.config.train_data_path)
         test_data = pd.read_csv(self.config.test_data_path)
-        data = pd.concat([train_data,test_data],ignore_index=True)
+        data = pd.concat([train_data, test_data], ignore_index=True)
 
         # init setup
-        s = setup(data, target=self.config.target_column, session_id=123)
+        s = setup(data, target=self.config.target_column,
+                  session_id=123, log_experiment=True, experiment_name='eeg')
         # create model
         knn = create_model('knn')
 
@@ -33,4 +34,5 @@ class ModelTrainer:
         # save_bin(tuned_knn, Path(os.path.join(self.config.root_dir, self.config.model_name)))
         # uncomment the above line to save the tuned model
 
-        save_bin(knn, Path(os.path.join(self.config.root_dir, self.config.model_name)))
+        save_bin(knn, Path(os.path.join(
+            self.config.root_dir, self.config.model_name)))

@@ -4,6 +4,9 @@ from pathlib import Path
 from mlProject import logger
 from pycaret.classification import *
 from mlProject.config.configuration import ModelTrainerConfig
+import mlflow
+
+mlflow.set_tracking_uri('https://dagshub.com/tejas05in/EEG_EYE.mlflow')
 
 
 class ModelTrainer:

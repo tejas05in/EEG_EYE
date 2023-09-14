@@ -16,7 +16,7 @@
 # How to run?
 ### STEPS:
 
-Clone the repository
+### Clone the repository
 
 ```bash
 https://github.com/tejas05in/EEG_EYE.git
@@ -43,7 +43,6 @@ python main.py
 ```
 
 ### STEP 04- Run the prediction pipeline
-Now,
 ```bash
 streamlit run app.py
 ```
@@ -60,32 +59,31 @@ streamlit run app.py
 mlflow ui
 ```
 
-<!-- ### dagshub
-[dagshub](https://dagshub.com/)
+### DagsHub
+[DagsHub](https://dagshub.com/)
 
-MLFLOW_TRACKING_URI=https://dagshub.com/tejas05in/End-to-End-Machine-Learning-Project-with-MLflow.mlflow \
+MLFLOW_TRACKING_URI=https://dagshub.com/tejas05in/EEG_EYE.mlflow \
 MLFLOW_TRACKING_USERNAME=tejas05in \
-MLFLOW_TRACKING_PASSWORD=9efcb5c7b79d0e949378459b922b1462a80fa413 \
-python script.py
+MLFLOW_TRACKING_PASSWORD=9efcb5c7b79d0e949378459b922b1462a80fa413 
 
-Run this to export as env variables:
+Run this to export as env variables in your bash terminal:
 
 ```bash
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/tejas05in/End-to-End-Machine-Learning-Project-with-MLflow.mlflow
+export MLFLOW_TRACKING_URI=https://dagshub.com/tejas05in/EEG_EYE.mlflow
 
 export MLFLOW_TRACKING_USERNAME=tejas05in 
 
 export MLFLOW_TRACKING_PASSWORD=9efcb5c7b79d0e949378459b922b1462a80fa413
 
-``` -->
+```
 
 
 
 
 ## About MLflow 
-MLflow
+[MLflow](https://mlflow.org/docs/latest/what-is-mlflow.html)
 
- - Its Production Grade
- - Trace all of your expriements
- - Logging & tagging your model
+🏢 Its Production Grade
+📣 Trace all of your expriements
+🔒 - Logging & tagging your model

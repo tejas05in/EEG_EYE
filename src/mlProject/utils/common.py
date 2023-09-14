@@ -54,65 +54,6 @@ def create_directories(path_to_directories: list, verbose=True):
 
 
 @ensure_annotations
-def save_json(path: Path, data: dict):
-    """save json data
-
-    Args:
-        path (Path): path to json file
-        data (dict): data to be saved in json file
-
-    """
-    with open(path, 'w') as f:
-        json.dump(data, f, indent=4)
-    logger.info("json file saved at:{path}")
-
-
-@ensure_annotations
-def load_json(path: Path) -> ConfigBox:
-    """load json file data
-
-
-    Args:
-        path (Path): path to json file
-
-    Returns:
-        ConfigBox: data as class attributes instead of dictionary
-    """
-    with open(path) as f:
-        content = json.load(f)
-    logger.info("json file loaded successfully from : {path}")
-    return ConfigBox(content)
-
-
-@ensure_annotations
-def save_bin(data, path: Path):
-    """save binary file
-
-    Args:
-        data (Any): data to be saved as binary file
-        path (Path): path to binary file
-
-    """
-    joblib.dump(value=data, filename=path)
-    logger.info(f"binary file saved at : {path}")
-
-
-@ensure_annotations
-def load_bin(path: Path) -> Any:
-    """load binary data from file
-
-    Args:
-        path (Path): path to binary file
-
-    Returns:
-        Any: object stored in binary file
-    """
-    data = joblib.load(path)
-    logger.info(f"binary file loaded from : {path}")
-    return data
-
-
-@ensure_annotations
 def get_size(path: Path) -> str:
     """
     Returns the size of a file in kb

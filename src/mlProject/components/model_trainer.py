@@ -2,7 +2,6 @@ import pandas as pd
 import os
 from pathlib import Path
 from mlProject import logger
-from mlProject.utils.common import save_bin
 from pycaret.classification import *
 from mlProject.config.configuration import ModelTrainerConfig
 
@@ -34,5 +33,5 @@ class ModelTrainer:
         # save_bin(tuned_knn, Path(os.path.join(self.config.root_dir, self.config.model_name)))
         # uncomment the above line to save the tuned model
 
-        save_bin(knn, Path(os.path.join(
+        save_model(knn, Path(os.path.join(
             self.config.root_dir, self.config.model_name)))

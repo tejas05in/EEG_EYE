@@ -24,11 +24,11 @@ https://github.com/tejas05in/EEG_EYE.git
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -p env python=3.8 -y
+conda create -p venv python=3.9.17 -y
 ```
 
 ```bash
-conda activate env/
+conda activate venv/
 ```
 
 
@@ -37,15 +37,15 @@ conda activate env/
 pip install -r requirements.txt
 ```
 
-
+### STEP 03- Run model trainer to generate artefacts
 ```bash
-# Finally run the following command
-python app.py
+python main.py
 ```
 
+### STEP 04- Run the prediction pipeline
 Now,
 ```bash
-open up you local host and port
+streamlit run app.py
 ```
 
 
@@ -55,10 +55,12 @@ open up you local host and port
 [Documentation](https://mlflow.org/docs/latest/index.html)
 
 
-##### cmd
-- mlflow ui
+### cmd
+```bash
+mlflow ui
+```
 
-### dagshub
+<!-- ### dagshub
 [dagshub](https://dagshub.com/)
 
 MLFLOW_TRACKING_URI=https://dagshub.com/tejas05in/End-to-End-Machine-Learning-Project-with-MLflow.mlflow \
@@ -76,7 +78,7 @@ export MLFLOW_TRACKING_USERNAME=tejas05in
 
 export MLFLOW_TRACKING_PASSWORD=9efcb5c7b79d0e949378459b922b1462a80fa413
 
-```
+``` -->
 
 
 
@@ -87,5 +89,3 @@ MLflow
  - Its Production Grade
  - Trace all of your expriements
  - Logging & tagging your model
-
-youtube video [link](https://www.youtube.com/watch?v=pxk1Fr33-L4)
